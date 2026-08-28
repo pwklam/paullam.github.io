@@ -1,0 +1,498 @@
+/* =========================
+   General
+========================= */
+
+:root {
+    --background: #ffffff;
+    --background-alt: #f6f7f9;
+
+    --text: #222222;
+    --text-light: #606060;
+
+    --primary: #17365d;
+    --primary-light: #e8eef5;
+
+    --border: #dddddd;
+
+    --max-width: 1050px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+    background: var(--background);
+
+    line-height: 1.7;
+}
+
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+a {
+    color: var(--primary);
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+}
+
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: auto;
+
+    padding: 16px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    text-decoration: none;
+    color: var(--text);
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+
+    font-size: 0.95rem;
+}
+
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    padding: 100px 24px 90px;
+}
+
+
+.hero-content {
+    max-width: var(--max-width);
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(220px, 0.5fr);
+
+    gap: 80px;
+    align-items: center;
+}
+
+
+.small-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    margin: 10px 0 20px;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 1.3rem;
+
+    color: var(--text-light);
+}
+
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.hero-image img {
+    width: 100%;
+    max-width: 280px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+.primary {
+    background: var(--primary);
+    color: white;
+}
+
+
+.primary:hover {
+    opacity: 0.9;
+}
+
+
+.secondary {
+    border: 1px solid var(--primary);
+
+    color: var(--primary);
+}
+
+
+.secondary:hover {
+    background: var(--primary-light);
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    padding: 80px 24px;
+}
+
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+
+.container > p {
+    max-width: 800px;
+}
+
+
+.alternate {
+    background: var(--background-alt);
+}
+
+
+.centre {
+    text-align: center;
+}
+
+
+.centre p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   Research Cards
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+.card h3 {
+    margin-top: 12px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    font-size: 0.8rem;
+
+    background: var(--primary-light);
+    color: var(--primary);
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   Publications
+========================= */
+
+.publication {
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.publication h3 {
+    margin: 0 0 5px;
+}
+
+
+.year {
+    font-weight: 700;
+
+    color: var(--primary);
+}
+
+
+.publication-info {
+    font-style: italic;
+
+    color: var(--text-light);
+}
+
+
+/* =========================
+   Timeline
+========================= */
+
+.timeline-item {
+    border-left: 3px solid var(--primary);
+
+    padding-left: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+}
+
+
+.institution {
+    color: var(--text-light);
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   Skills
+========================= */
+
+.skill-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+
+.skill-grid ul {
+    padding-left: 20px;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact-links {
+    margin-top: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.contact-links a {
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+}
+
+
+footer p {
+    margin: 4px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        display: block;
+    }
+
+
+    .nav-links {
+        margin-top: 10px;
+
+        overflow-x: auto;
+
+        gap: 18px;
+    }
+
+
+    .hero {
+        padding-top: 60px;
+    }
+
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .hero-image {
+        order: -1;
+    }
+
+
+    .hero-image img {
+        max-width: 180px;
+    }
+
+
+    .cards,
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .publication {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+}
